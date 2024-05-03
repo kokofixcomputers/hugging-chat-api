@@ -304,7 +304,7 @@ class ChatBot:
 
         if r.status_code != 200:
             raise exceptions.DeleteConversationError(
-                f"Failed to delete ALL conversations with status code: {r.status_code}"
+                f"Failed to delete ALL conversations with status code: {r.status_code} {r.json()}"
             )
 
         self.conversation_list = []
